@@ -1,19 +1,29 @@
-// dllmain.cpp : Defines the entry point for the DLL application.
 #include "pch.h"
+#include <Windows.h>
+#include <fstream>
 
-BOOL APIENTRY DllMain( HMODULE hModule,
-                       DWORD  ul_reason_for_call,
-                       LPVOID lpReserved
-                     )
+DWORD WINAPI AspectMain(LPVOID lpParam)
 {
-    switch (ul_reason_for_call)
+    Sleep(3000);
+
+    std::ofstream log("aspect_log.txt");
+    log << "Aspect Core loaded successfully." << std::endl;
+    log.close();
+
+    while (true)
     {
-    case DLL_PROCESS_ATTACH:
-    case DLL_THREAD_ATTACH:
-    case DLL_THREAD_DETACH:
-    case DLL_PROCESS_DETACH:
-        break;
+        Sleep(1000);
+    }
+
+    return 0;
+}
+
+BOOL APIENTRY DllMain(HMODULE hModule, DWORD reason, LPVOID reserved)
+{
+    if (reason == DLL_PROCESS_ATTACH)
+    {
+        DisableThreadLibraryCalls(hModule);
+        CreateThread(0, 0, &AspectMain, NULL, 0, NULL);
     }
     return TRUE;
 }
-

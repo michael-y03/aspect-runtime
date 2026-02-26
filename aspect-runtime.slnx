@@ -3,5 +3,6 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="Aspect.Core/Aspect.Core.vcxproj" />
+  <Project Path="Aspect.Core/Aspect.Core.vcxproj" Id="d9aaff5a-3ec3-4fd6-83b2-cd96759e5734" />
+  <Project Path="Aspect.Proxy.WinHttp/Aspect.Proxy.WinHttp.vcxproj" Id="3cbd4dcc-cbb3-48bd-9ba3-87a5249a0aef" />
 </Solution>
