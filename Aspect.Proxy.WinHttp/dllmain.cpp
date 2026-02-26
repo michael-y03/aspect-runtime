@@ -1,4 +1,3 @@
-#include "pch.h"
 #include <Windows.h>
 
 #pragma comment(linker, "/export:WinHttpAddRequestHeaders=C:\\Windows\\System32\\winhttp.WinHttpAddRequestHeaders")

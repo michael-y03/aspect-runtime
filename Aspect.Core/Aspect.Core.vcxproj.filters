@@ -13,6 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\vendor/minhook">
+      <UniqueIdentifier>{b8750590-308b-4285-b594-7c10d6ccf5a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\vendor/imgui">
+      <UniqueIdentifier>{c9d10de0-99fe-4d13-86c5-822a17f26a39}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -26,8 +32,38 @@
     <ClCompile Include="dllmain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="pch.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="..\vendor\minhook\src\buffer.c">
+      <Filter>Source Files\vendor/minhook</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\minhook\src\hook.c">
+      <Filter>Source Files\vendor/minhook</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\minhook\src\trampoline.c">
+      <Filter>Source Files\vendor/minhook</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\minhook\src\hde\hde32.c">
+      <Filter>Source Files\vendor/minhook</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\minhook\src\hde\hde64.c">
+      <Filter>Source Files\vendor/minhook</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\imgui\imgui.cpp">
+      <Filter>Source Files\vendor/imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\imgui\imgui_draw.cpp">
+      <Filter>Source Files\vendor/imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\imgui\imgui_impl_dx11.cpp">
+      <Filter>Source Files\vendor/imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\imgui\imgui_impl_win32.cpp">
+      <Filter>Source Files\vendor/imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\imgui\imgui_tables.cpp">
+      <Filter>Source Files\vendor/imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\imgui\imgui_widgets.cpp">
+      <Filter>Source Files\vendor/imgui</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
